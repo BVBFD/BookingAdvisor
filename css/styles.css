@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+:root {
+  --blue: #29d9d5;
+  --black: #111;
+  --light-color: #aaa;
+  --bg-color: #222;
+  --white: #fff;
+  --black-bg: rgba(17, 17, 17, 0.7);
+  --border: 0.2rem solid var(--blue);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--black);
+}
+
+body {
+  background-color: var(--black);
+  overflow-x: hidden;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: var(--blue);
+  border: var(--border);
+  border-radius: 5rem;
+  cursor: pointer;
+  background: none;
+}
+
+.btn:hover {
+  background: var(--blue);
+  color: var(--black);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 9%;
+}
+
+.header .navbar a {
+  font-size: 1.7rem;
+  color: var(--light-color);
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.header .navbar a:hover {
+  color: var(--blue);
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--white);
+  font-weight: bolder;
+}
+
+.logo i {
+  color: var(--blue);
+  padding-right: 0.5rem;
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  color: var(--white);
+  cursor: pointer;
+  display: none;
+}
+
+/* media queries */
+
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: var(--bg-color);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .header .navbar a {
+    margin: 2rem;
+    font-size: 2rem;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
