@@ -324,6 +324,42 @@ section {
   padding: 0.5rem;
 }
 
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  gap: 1.5rem;
+}
+
+.services .box-container .box {
+  background: var(--bg-color);
+  border-radius: 1rem;
+  padding: 3rem;
+  text-align: center;
+  border: 0.2rem solid var(--black);
+}
+
+.services .box-container .box:hover {
+  border: var(--border);
+}
+
+.services .box-container .box i {
+  font-size: 4rem;
+  color: var(--blue);
+  margin-bottom: 2rem;
+}
+
+.services .box-container .box h3 {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.services .box-container .box p {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: var(--light-color);
+  line-height: 2;
+}
+
 /* media queries */
 @media screen and (max-width: 991px) {
   html {
