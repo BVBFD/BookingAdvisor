@@ -456,6 +456,133 @@ section {
   color: var(--blue);
 }
 
+.banner {
+  background: linear-gradient(var(--black-bg), var(--black-bg)),
+    url(../images/banner-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 2rem;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.banner .content span {
+  font-size: 2rem;
+  color: var(--blue);
+}
+
+.banner .content h3 {
+  font-size: 4rem;
+  color: var(--white);
+  margin-top: 1rem;
+}
+
+.banner .content p {
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1.4rem;
+  color: var(--light-color);
+  line-height: 2;
+}
+
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box {
+  padding: 1rem 0;
+}
+
+.footer .box-container .box .logo {
+  padding-bottom: 1rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.2rem;
+  color: var(--white);
+  padding: 1rem 0;
+}
+
+.footer .box-container .box p {
+  font-size: 1.4rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.footer .box-container .box p i {
+  padding-right: 0.5rem;
+  color: var(--blue);
+}
+
+.footer .box-container .box .share {
+  padding-top: 1rem;
+}
+
+.footer .box-container .box .share a {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  font-size: 1.7rem;
+  border: 0.2rem solid var(--blue);
+  color: var(--blue);
+  margin-right: 0.5rem;
+  text-align: center;
+}
+
+.footer .box-container .box .share a:hover {
+  background: var(--blue);
+  color: var(--black);
+}
+
+.footer .box-container .box .links {
+  font-size: 1.4rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+  display: block;
+}
+
+.footer .box-container .box .links:hover {
+  color: var(--blue);
+}
+
+.footer .box-container .box .links:hover i {
+  padding-right: 2rem;
+}
+
+.footer .box-container .box .links i {
+  padding-right: 0.5rem;
+  color: var(--blue);
+}
+
+.footer .box-container .box form .email {
+  width: 100%;
+  border-radius: 5rem;
+  border: 0.2rem solid var(--blue);
+  background: none;
+  font-size: 1.5rem;
+  text-transform: none;
+  color: var(--light-color);
+  margin-bottom: 1rem;
+  padding: 1.2rem 1.4rem;
+}
+
+.credit {
+  background: var(--bg-color);
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem 1rem;
+  color: var(--light-color);
+}
+
+.credit span {
+  color: var(--blue);
+}
+
 /* media queries */
 @media screen and (max-width: 991px) {
   html {
@@ -515,5 +642,9 @@ section {
 
   .about .content h3 {
     font-size: 3.5rem;
+  }
+
+  .banner .content h3 {
+    font-size: 2.7rem;
   }
 }
